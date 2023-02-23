@@ -92,6 +92,14 @@ const App = () => {
             </ProtectedRoute>
           }
         />
+        <Route
+          path="/workout/:id/edit"
+          element={
+            <ProtectedRoute user={user}>
+              <EditWorkout />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
     </>
   )
