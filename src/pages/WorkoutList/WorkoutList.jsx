@@ -1,13 +1,16 @@
 import React from 'react'
+import styles from './WorkoutList.module.css'
+import WorkoutCard from '../../components/WorkoutCard/WorkoutCard'
 
 const WorkoutList = ({workouts}) => {
   return (
     <div>
       {workouts.map((workout, index) => (
       <div key={index}>
-        <div>{workout.name}</div>
-        <div>{workout.weight}</div>
-        <div>{workout.reps}</div>
+        <WorkoutCard
+          key={workout._id}
+          workout={workout}
+        />
       </div>
       ))}
     </div>

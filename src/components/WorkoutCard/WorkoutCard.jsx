@@ -1,8 +1,14 @@
-import React from 'react'
+import styles from './WorkoutCard.module.css'
 
-const WorkoutCard = () => {
+const WorkoutCard = ({workout}) => {
   return (
-    <div>WorkoutCard</div>
+    <div className='card-container'>
+      <div>{workout.name}</div>
+      <div>
+        <div>{workout.weight}</div>
+        <div>{workout.reps}</div>
+      </div>
+    </div>
   )
 }
 
