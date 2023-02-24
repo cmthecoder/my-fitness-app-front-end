@@ -1,6 +1,6 @@
 import * as tokenService from './tokenService'
 
-const BASE_URL = `${process.env.REACT_APP_BACK_END_SERVER_URL}/api/tenants`
+const BASE_URL = `${process.env.REACT_APP_BACK_END_SERVER_URL}/api/workouts`
 
 
 const index = async () => {
@@ -25,7 +25,24 @@ const show = async (id) => {
   }
 }
 
+const create = async (workoutData) => {
+  try {
+    const res = await fetch(BASE_URL, {
+      method: 'POST',
+      headers: {
+        Authorization:`Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(workoutData)
+    })
+    return res.json()
+  } catch (err) {
+    console.log(err)
+  }
+}
+
 export {
   index,
-  show
+  show,
+  create,
 }

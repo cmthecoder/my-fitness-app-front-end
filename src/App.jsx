@@ -41,6 +41,12 @@ const App = () => {
     setUser(authService.getUser())
   }
 
+  // Add a workout
+  const handleAddWorkout = async (workoutData) => {
+    const newWorkout = await workoutsService.create(workoutData)
+    setWorkouts([...workouts, newWorkout])
+  }
+
   // Get all workouts
 
   useEffect(() => {
@@ -89,6 +95,7 @@ const App = () => {
               <WorkoutList
                 workouts={workouts}
               />
+              <AddWorkout handleAddWorkout={handleAddWorkout}/>
             </ProtectedRoute>
           }
         />
