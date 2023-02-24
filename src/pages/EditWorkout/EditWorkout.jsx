@@ -1,8 +1,63 @@
 import React from 'react'
+import { useState } from 'react'
+import { useLocation } from 'react-router-dom'
 
-const EditWorkout = () => {
+const EditWorkout = (props) => {
+
+  const { state } = useLocation()
+  const [form, setForm] = useState(state)
+
+  const handleChange = ({target}) => {
+    setForm({ ...form, [target.name]: target.value})
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    props.handleUpdateWorkout(form)
+  }
+
   return (
-    <div>EditWorkout</div>
+    <div>
+    <form onSubmit={handleSubmit}>
+      <div>
+        <label htmlFor="name-input">Name:</label>
+        <input
+          type="text"
+          required
+          autoComplete="off"
+          name="name"
+          value={form.name}
+          placeholder='Bench Press'
+          onChange={handleChange}
+        />
+      </div>
+      <div>
+        <label htmlFor="weight-input">Weight:</label>
+        <input
+          type="number"
+          required
+          autoComplete="off"
+          name="weight"
+          value={form.weight}
+          placeholder='200 lbs'
+          onChange={handleChange}
+        />
+      </div>
+      <div>
+        <label htmlFor="reps-input">Reps:</label>
+        <input
+          type="number"
+          required
+          autoComplete="off"
+          name="reps"
+          value={form.reps}
+          placeholder='10'
+          onChange={handleChange}
+        />
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
   )
 }
 

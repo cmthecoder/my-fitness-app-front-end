@@ -47,6 +47,14 @@ const App = () => {
     setWorkouts([...workouts, newWorkout])
   }
 
+  // Update workout
+
+  const handleUpdateWorkout = async (workoutData) => {
+    const updatedWorkout = await workoutsService.update(workoutData)
+    setWorkouts(workouts.map((b) => (workoutData._id === b._id ? updatedWorkout : b)))
+    navigate('/workouts')
+  }
+
   // Get all workouts
 
   useEffect(() => {
@@ -103,7 +111,9 @@ const App = () => {
           path="/workout/:id/edit"
           element={
             <ProtectedRoute user={user}>
-              <EditWorkout />
+              <EditWorkout
+                handleUpdateWorkout={handleUpdateWorkout}
+              />
             </ProtectedRoute>
           }
         />

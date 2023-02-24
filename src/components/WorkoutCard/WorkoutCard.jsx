@@ -4,7 +4,7 @@ import styles from './WorkoutCard.module.css'
 const WorkoutCard = ({workout}) => {
   return (
     <div className='card-container'>
-      <Link to={`/workout/${workout._id}/edit`}>
+      <Link to={`/workout/${workout._id}/edit`} state={workout}>
         <div>{workout.name}</div>
         <div>
           <div>{workout.weight}</div>

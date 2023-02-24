@@ -41,8 +41,25 @@ const create = async (workoutData) => {
   }
 }
 
+const update = async (workoutData) => {
+  try {
+    const res = await fetch(`${BASE_URL}/${workoutData._id}`, {
+      method: 'PUT',
+      headers: {
+        Authorization: `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(workoutData)
+    })
+    return res.json()
+  } catch (err) {
+    console.log(err)
+  }
+}
+
 export {
   index,
   show,
   create,
+  update
 }
