@@ -10,7 +10,6 @@ import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import AddWorkout from './pages/AddWorkout/AddWorkout'
 import EditWorkout from './pages/EditWorkout/EditWorkout'
-import WorkoutDetails from './pages/WorkoutDetails/WorkoutDetails'
 import WorkoutList from './pages/WorkoutList/WorkoutList'
 
 
@@ -53,6 +52,12 @@ const App = () => {
     const updatedWorkout = await workoutsService.update(workoutData)
     setWorkouts(workouts.map((b) => (workoutData._id === b._id ? updatedWorkout : b)))
     navigate('/workouts')
+  }
+
+  // Delete Workout
+  const handleDeleteWorkout = async (id) => {
+    const deletedWorkout = await workoutsService.deleteWorkout(id)
+    setWorkouts(workouts.filter((workout) => workout._id !== deletedWorkout._id))
   }
 
   // Get all workouts
@@ -102,6 +107,7 @@ const App = () => {
             <ProtectedRoute user={user}>
               <WorkoutList
                 workouts={workouts}
+                handleDeleteWorkout={handleDeleteWorkout}
               />
               <AddWorkout handleAddWorkout={handleAddWorkout}/>
             </ProtectedRoute>

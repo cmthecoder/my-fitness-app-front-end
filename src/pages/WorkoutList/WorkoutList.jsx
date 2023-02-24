@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './WorkoutList.module.css'
 import WorkoutCard from '../../components/WorkoutCard/WorkoutCard'
 
-const WorkoutList = ({workouts}) => {
+const WorkoutList = ({workouts, handleDeleteWorkout}) => {
   return (
     <div>
       {workouts.map((workout, index) => (
@@ -10,6 +10,7 @@ const WorkoutList = ({workouts}) => {
         <WorkoutCard
           key={workout._id}
           workout={workout}
+          handleDeleteWorkout={handleDeleteWorkout}
         />
       </div>
       ))}
