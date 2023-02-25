@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import Logo from '../../assets/fittwo.png'
+import NavLogo from '../../assets/thefit.png'
 
 const NavBar = ({ user, handleLogout }) => {
   return (
@@ -13,12 +13,16 @@ const NavBar = ({ user, handleLogout }) => {
         </ul>
       </div>
       :
-      <div>
-        <img src={Logo} alt="workout app logo" />
-        <ul className='flex'>
-          <li className='border-2'><Link to="/login">Log In</Link></li>
-          <li className='border-2'><Link to="/signup">Sign Up</Link></li>
-        </ul>
+      <div className='fixed w-full h-[80px] flex justify-between items-center pr-2 m-0'>
+        <div className='m'>
+          <img src={NavLogo} alt="workout app logo" style={{width: '270px'}}/>
+        </div>
+        <div className='ml'>
+          <ul className='flex w-full'>
+            <li className='border-2'><Link to="/login">Log In</Link></li>
+            <li className='border-2'><Link to="/signup">Sign Up</Link></li>
+          </ul>
+        </div>
       </div>
       }
     </>
