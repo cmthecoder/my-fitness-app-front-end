@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import styles from './WorkoutCard.module.css'
 
 const WorkoutCard = ({workout, handleDeleteWorkout}) => {
   return (

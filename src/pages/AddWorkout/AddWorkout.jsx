@@ -1,5 +1,4 @@
 import { useState } from "react"
-import styles from './AddWorkout.module.css'
 
 const AddWorkout = (props) => {
 

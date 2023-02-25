@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import styles from './ChangePasswordForm.module.css'
 import * as authService from '../../services/authService'
 
 const ChangePasswordForm = props => {
@@ -40,10 +39,10 @@ const ChangePasswordForm = props => {
     <form
       autoComplete="off"
       onSubmit={handleSubmit}
-      className={styles.container}
+      className='flex flex-col flex-nowrap justify-center items-center mb-12'
     >
-      <div className={styles.inputContainer}>
-        <label htmlFor="password" className={styles.label}>
+      <div className='mb-4'>
+        <label htmlFor="password" className='mr-2'>
           Current Password
         </label>
         <input
@@ -55,8 +54,8 @@ const ChangePasswordForm = props => {
           onChange={handleChange}
         />
       </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="newPassword" className={styles.label}>
+      <div className='mb-4'>
+        <label htmlFor="newPassword" className='mr-2'>
           New Password
         </label>
         <input
@@ -68,8 +67,8 @@ const ChangePasswordForm = props => {
           onChange={handleChange}
         />
       </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="newPasswordConf" className={styles.label}>
+      <div className='mb-4'>
+        <label htmlFor="newPasswordConf" className='mr-2'>
           Confirm New Password
         </label>
         <input
@@ -81,8 +80,8 @@ const ChangePasswordForm = props => {
           onChange={handleChange}
         />
       </div>
-      <div className={styles.inputContainer}>
-        <button disabled={isFormInvalid()} className={styles.button}>
+      <div className='mb-4'>
+        <button disabled={isFormInvalid()} className='mr-2'>
           Change Password
         </button>
         <Link to="/">

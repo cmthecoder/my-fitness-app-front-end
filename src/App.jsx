@@ -22,8 +22,6 @@ import * as authService from './services/authService'
 import * as workoutsService from './services/workoutsService'
 import * as profileService from './services/profileService'
 
-// styles
-import './App.css'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())

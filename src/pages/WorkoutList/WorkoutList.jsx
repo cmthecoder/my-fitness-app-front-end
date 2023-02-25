@@ -1,5 +1,4 @@
 import React from 'react'
-import styles from './WorkoutList.module.css'
 import WorkoutCard from '../../components/WorkoutCard/WorkoutCard'
 
 const WorkoutList = ({workouts, handleDeleteWorkout}) => {
