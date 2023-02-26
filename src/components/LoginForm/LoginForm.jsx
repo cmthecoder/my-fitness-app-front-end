@@ -26,40 +26,41 @@ const LoginForm = props => {
   }
 
   return (
-    <form
-      autoComplete="off"
-      onSubmit={handleSubmit}
-      className='flex flex-nowrap justify-center items-center flex-col'
-    >
-      <div className='mr-4'>
-        <label htmlFor="email" className='mr-2'>Email</label>
-        <input
-          type="text"
-          autoComplete="off"
-          id="email"
-          value={formData.email}
-          name="email"
-          onChange={handleChange}
-        />
-      </div>
-      <div className='mr-4'>
-        <label htmlFor="password" className='mr-2'>Password</label>
-        <input
-          type="password"
-          autoComplete="off"
-          id="password"
-          value={formData.pw}
-          name="pw"
-          onChange={handleChange}
-        />
-      </div>
-      <div>
-        <button className='mr-2'>Log In</button>
-        <Link to="/">
-          <button>Cancel</button>
-        </Link>
-      </div>
-    </form>
+    <div className='w-full h-screen flex justify-center items-center'>
+      <form
+        autoComplete="off"
+        onSubmit={handleSubmit}
+        className='flex flex-col border-2 border-black p-3'
+      >
+        <div>
+          <label htmlFor="email" className='mr-2 text-lg'>Email:</label>
+          <input
+            type="text"
+            autoComplete="off"
+            id="email"
+            value={formData.email}
+            name="email"
+            onChange={handleChange}
+          />
+        </div>
+        <div>
+          <label htmlFor="password" className='mr-2 text-lg'>Password:</label>
+          <input
+            type="password"
+            autoComplete="off"
+            id="password"
+            value={formData.pw}
+            name="pw"
+            onChange={handleChange}
+          />
+        </div>
+        <div className='flex justify-center items-center mt-2 pt-2'>
+          <Link to="/">
+            <button className='border-2 border-black rounded-lg p-1 text-white bg-black'>Cancel</button>
+          </Link>
+        </div>
+      </form>
+    </div>
   )
 }
 

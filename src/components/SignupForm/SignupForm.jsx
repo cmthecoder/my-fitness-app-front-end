@@ -93,7 +93,7 @@ const SignupForm = props => {
           onChange={handleChange}
         />
       </div>
-      <div className='mb-4'>
+      {/* <div className='mb-4'>
         <label htmlFor="photo-upload" className='mr-2'>
           Upload Photo
         </label>
@@ -103,7 +103,7 @@ const SignupForm = props => {
           name="photo"
           onChange={handleChangePhoto}
         />
-      </div>
+      </div> */}
       <div className='mb-4'>
         <button disabled={isFormInvalid()} className='mr-2'>
           Sign Up
