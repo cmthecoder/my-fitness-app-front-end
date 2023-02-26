@@ -1,11 +1,15 @@
-import Logo from '../../assets/fittwo.png'
+import LandingLogo from '../../assets/fittwo.png'
 
 const Landing = ({ user }) => {
   return (
-    <main className='flex items-center flex-col'>
-      <img src={Logo} alt="workout app logo" />
-      <h1>hello, {user ? user.name : 'friend'}</h1>
-    </main>
+    <div className='w-full h-screen'>
+      {/* random quotes */}
+      <div className='flex flex-col justify-center items-center w-full h-full'>
+        <h1 className='text-xl font-medium'>{user ? '' : 'Welcome to the,'}</h1>
+        <img src={LandingLogo} alt="the fit logo" style={{width:'530px'}}/>
+        {/* <div> random quotes go here</div> */}
+      </div>
+    </div>
   )
 }
 

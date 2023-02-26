@@ -71,7 +71,7 @@ const App = () => {
   },[user])
 
   return (
-    <>
+    <div>
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
         <Route path="/" element={<Landing user={user} />} />
@@ -122,7 +122,7 @@ const App = () => {
           }
         />
       </Routes>
-    </>
+    </div>
   )
 }
 
