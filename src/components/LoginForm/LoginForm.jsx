@@ -26,35 +26,36 @@ const LoginForm = props => {
   }
 
   return (
-    <div className='w-full h-screen flex justify-center items-center'>
+    <div>
       <form
         autoComplete="off"
         onSubmit={handleSubmit}
         className='flex flex-col border-2 border-black p-3'
       >
         <div>
-          <label htmlFor="email" className='mr-2 text-lg'>Email:</label>
+          <label htmlFor="email" className='mr-2 text-lg inline-block w-20'>Email:</label>
           <input
             type="text"
             autoComplete="off"
-            id="email"
+            className='border-2 border-black rounded-md w-52 pl-1'
             value={formData.email}
             name="email"
             onChange={handleChange}
           />
         </div>
         <div>
-          <label htmlFor="password" className='mr-2 text-lg'>Password:</label>
+          <label htmlFor="password" className='mr-2 text-lg inline-block w-20'>Password:</label>
           <input
             type="password"
             autoComplete="off"
-            id="password"
+            className='border-2 border-black rounded-md w-52 mt-2 pl-1'
             value={formData.pw}
             name="pw"
             onChange={handleChange}
           />
         </div>
-        <div className='flex justify-center items-center mt-2 pt-2'>
+        <div className='flex justify-center items-center mt-2 pt-2 gap-2'>
+          <button className='border-2 border-black rounded-lg p-1 text-white bg-black'>Log In</button>
           <Link to="/">
             <button className='border-2 border-black rounded-lg p-1 text-white bg-black'>Cancel</button>
           </Link>

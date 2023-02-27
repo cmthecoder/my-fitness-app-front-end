@@ -9,8 +9,8 @@ const Signup = props => {
   }
 
   return (
-    <main className='flex items-center flex-col'>
-      <h1>Sign Up</h1>
+    <main className='w-full h-screen flex justify-center items-center flex-col'>
+      <h1 className='mb-10 sm:text-3xl text-xl'>Sign Up</h1>
       <p>{message}</p>
       <SignupForm {...props} updateMessage={updateMessage} />
     </main>
