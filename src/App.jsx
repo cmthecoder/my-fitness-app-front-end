@@ -8,7 +8,7 @@ import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
-import AddWorkout from './pages/AddWorkout/AddWorkout'
+// import AddWorkout from './pages/AddWorkout/AddWorkout'
 import EditWorkout from './pages/EditWorkout/EditWorkout'
 import WorkoutList from './pages/WorkoutList/WorkoutList'
 
@@ -39,10 +39,10 @@ const App = () => {
   }
 
   // Add a workout
-  const handleAddWorkout = async (workoutData) => {
-    const newWorkout = await workoutsService.create(workoutData)
-    setWorkouts([...workouts, newWorkout])
-  }
+  // const handleAddWorkout = async (workoutData) => {
+  //   const newWorkout = await workoutsService.create(workoutData)
+  //   setWorkouts([...workouts, newWorkout])
+  // }
 
   // Update workout
 
@@ -107,7 +107,7 @@ const App = () => {
                 workouts={workouts}
                 handleDeleteWorkout={handleDeleteWorkout}
               />
-              <AddWorkout handleAddWorkout={handleAddWorkout}/>
+              {/* <AddWorkout handleAddWorkout={handleAddWorkout}/> */}
             </ProtectedRoute>
           }
         />

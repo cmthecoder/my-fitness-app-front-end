@@ -40,7 +40,7 @@ const ChangePasswordForm = props => {
       <form
         autoComplete="off"
         onSubmit={handleSubmit}
-        className='flex flex-col border-2 border-black lg:p-20 p-6 text-2xl'
+        className='flex flex-col border-2 border-black lg:p-16 p-6 text-2xl'
       >
         <div className='mb-4 flex flex-col'>
           <label htmlFor="password" className='mr-2 sm:text-2xl text-xl flex justify-center'>

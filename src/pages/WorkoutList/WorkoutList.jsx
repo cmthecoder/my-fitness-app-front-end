@@ -12,6 +12,7 @@ const WorkoutList = ({workouts, handleDeleteWorkout}) => {
           handleDeleteWorkout={handleDeleteWorkout}
         />
       </div>
+      
       ))}
     </div>
   )
