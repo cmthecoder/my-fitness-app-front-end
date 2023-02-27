@@ -40,10 +40,10 @@ const ChangePasswordForm = props => {
       <form
         autoComplete="off"
         onSubmit={handleSubmit}
-        className='flex flex-col border-2 border-black p-3'
+        className='flex flex-col border-2 border-black lg:p-20 p-6 text-2xl'
       >
-        <div className='mb-4'>
-          <label htmlFor="password" className='mr-2 text-lg inline-block w-22'>
+        <div className='mb-4 flex flex-col'>
+          <label htmlFor="password" className='mr-2 sm:text-2xl text-xl flex justify-center'>
             Current Password:
           </label>
           <input
@@ -55,38 +55,38 @@ const ChangePasswordForm = props => {
             onChange={handleChange}
           />
         </div>
-        <div className='mb-4'>
-          <label htmlFor="newPassword" className='mr-2 text-lg inline-block w-22'>
+        <div className='mb-4 flex flex-col'>
+          <label htmlFor="newPassword" className='mr-2 sm:text-2xl text-xl flex justify-center'>
             New Password:
           </label>
           <input
             type="password"
             autoComplete="off"
-            className='border-2 border-black rounded-md w-52 pl-1'
+            className='border-2 border-black rounded-md w-50 pl-1'
             value={newPw}
             name="newPw"
             onChange={handleChange}
           />
         </div>
-        <div className='mb-4'>
-          <label htmlFor="newPasswordConf" className='mr-2 text-lg inline-block w-22'>
-            Confirm New Password
+        <div className='mb-4 flex flex-col'>
+          <label htmlFor="newPasswordConf" className='mr-2 sm:text-2xl text-xl flex justify-center'>
+            Confirm New Password:
           </label>
           <input
             type="password"
             autoComplete="off"
-            className='border-2 border-black rounded-md w-52 pl-1'
+            className='border-2 border-black rounded-md w-50 pl-1'
             value={newPwConf}
             name="newPwConf"
             onChange={handleChange}
           />
         </div>
-        <div className='flex justify-center items-center mt-2 pt-2 gap-2'>
-          <button disabled={isFormInvalid()} className='border-2 border-black rounded-lg p-1 text-white bg-black'>
+        <div className='flex  flex-col justify-center items-center mt-2 pt-2 gap-2'>
+          <button disabled={isFormInvalid()} className='border-2 border-black rounded-lg p-1 text-white bg-black text-sm'>
             Change Password
           </button>
           <Link to="/">
-            <button className='border-2 border-black rounded-lg p-1 text-white bg-black'>Cancel</button>
+            <button className='border-2 border-black rounded-lg p-1 text-white bg-black text-sm'>Cancel</button>
           </Link>
         </div>
       </form>
