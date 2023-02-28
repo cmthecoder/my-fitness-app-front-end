@@ -4,7 +4,7 @@ const NavBar = ({ user, handleLogout }) => {
   return (
     <>
       {user ?
-      <div className='fixed w-full h-[80px] flex justify-end items-center pr-2 m-0 border-b-4 border-[#d42719]'>
+      <div className='w-full h-[80px] flex justify-end items-center pr-2 m-0 border-b-4 border-[#d42719]'>
         <div>
           <ul className='flex items-center w-full gap-4'>
             <li><Link to='/workouts'><span className="material-symbols-outlined">exercise</span></Link></li>

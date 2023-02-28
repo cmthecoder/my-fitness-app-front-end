@@ -39,10 +39,10 @@ const App = () => {
   }
 
   // Add a workout
-  // const handleAddWorkout = async (workoutData) => {
-  //   const newWorkout = await workoutsService.create(workoutData)
-  //   setWorkouts([...workouts, newWorkout])
-  // }
+  const handleAddWorkout = async (workoutData) => {
+    const newWorkout = await workoutsService.create(workoutData)
+    setWorkouts([...workouts, newWorkout])
+  }
 
   // Update workout
 
@@ -106,6 +106,7 @@ const App = () => {
               <WorkoutList
                 workouts={workouts}
                 handleDeleteWorkout={handleDeleteWorkout}
+                handleAddWorkout={handleAddWorkout}
               />
               {/* <AddWorkout handleAddWorkout={handleAddWorkout}/> */}
             </ProtectedRoute>

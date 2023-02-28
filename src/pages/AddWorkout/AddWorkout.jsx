@@ -19,9 +19,12 @@ const AddWorkout = (props) => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form
+        onSubmit={handleSubmit}
+        className='flex flex-col border-2 border-black p-10 lg:mx-60 bg-[#f5fffa]'
+      >
         <div>
-          <label htmlFor="name-input">Name:</label>
+          <label htmlFor="name-input" className='text-lg flex justify-center'>Workout:</label>
           <input
             type="text"
             required
@@ -30,10 +33,11 @@ const AddWorkout = (props) => {
             value={form.name}
             placeholder='Bench Press'
             onChange={handleChange}
+            className='border-2 border-black rounded-md lg:w-full pl-1'
           />
         </div>
         <div>
-          <label htmlFor="weight-input">Weight:</label>
+          <label htmlFor="weight-input" className='text-lg flex justify-center'>Weight:</label>
           <input
             type="number"
             required
@@ -42,10 +46,11 @@ const AddWorkout = (props) => {
             value={form.weight}
             placeholder='200 lbs'
             onChange={handleChange}
+            className='border-2 border-black rounded-md lg:w-full mt-2 pl-1'
           />
         </div>
         <div>
-          <label htmlFor="reps-input">Reps:</label>
+          <label htmlFor="reps-input" className='text-lg flex justify-center'>Reps:</label>
           <input
             type="number"
             required
@@ -54,9 +59,12 @@ const AddWorkout = (props) => {
             value={form.reps}
             placeholder='10'
             onChange={handleChange}
+            className='border-2 border-black rounded-md lg:w-full mt-2 pl-1'
           />
         </div>
-        <button type="submit">Add Workout</button>
+        <div className='flex justify-center items-center mt-2 pt-2 gap-2'>
+          <button type="submit" className='border-2 border-black rounded-lg p-1 text-white bg-black'>Add Workout</button>
+        </div>
       </form>
     </div>
   )
