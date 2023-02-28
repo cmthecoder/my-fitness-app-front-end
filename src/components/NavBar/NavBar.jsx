@@ -7,9 +7,9 @@ const NavBar = ({ user, handleLogout }) => {
       <div className='w-full h-[80px] flex justify-end items-center pr-2 m-0 border-b-4 border-[#d42719]'>
         <div>
           <ul className='flex items-center w-full gap-4'>
-            <li><Link to='/workouts'><span className="material-symbols-outlined">exercise</span></Link></li>
-            <li><Link to="/change-password"><span className="material-symbols-outlined">lock_reset</span></Link></li>
-            <li><Link to="" onClick={handleLogout}><span className="material-symbols-outlined">logout</span></Link></li>
+            <li><Link to='/workouts'><span className="material-symbols-outlined lg:text-3xl text-2xl">exercise</span></Link></li>
+            <li><Link to="/change-password"><span className="material-symbols-outlined lg:text-3xl text-2xl">lock_reset</span></Link></li>
+            <li><Link to="" onClick={handleLogout}><span className="material-symbols-outlined lg:text-3xl text-2xl">logout</span></Link></li>
           </ul>
         </div>
       </div>
