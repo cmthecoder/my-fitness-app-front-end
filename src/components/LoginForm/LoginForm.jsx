@@ -30,32 +30,32 @@ const LoginForm = props => {
       <form
         autoComplete="off"
         onSubmit={handleSubmit}
-        className='flex flex-col border-2 border-black p-3'
+        className='flex flex-col border-2 border-black p-16 lg:p-12'
       >
-        <div>
-          <label htmlFor="email" className='mr-2 text-lg inline-block w-20'>Email:</label>
+        <div className='flex flex-col justify-center items-center'>
+          <label htmlFor="email" className='ml-6 lg:mr-0 text-2xl inline-block w-20 lg:text-2xl'>Email:</label>
           <input
             type="text"
             autoComplete="off"
-            className='border-2 border-black rounded-md w-52 pl-1'
+            className='border-2 border-black rounded-md w-50 pl-1 lg:text-xl text-lg'
             value={formData.email}
             name="email"
             onChange={handleChange}
           />
         </div>
-        <div>
-          <label htmlFor="password" className='mr-2 text-lg inline-block w-20'>Password:</label>
+        <div className='flex flex-col justify-center items-center'>
+          <label htmlFor="password" className='mr-2 lg:mr-8 text-2xl inline-block w-20 lg:text-2xl'>Password:</label>
           <input
             type="password"
             autoComplete="off"
-            className='border-2 border-black rounded-md w-52 mt-2 pl-1'
+            className='border-2 border-black rounded-md w-50 mt-2 pl-1 lg:text-xl text-lg'
             value={formData.pw}
             name="pw"
             onChange={handleChange}
           />
         </div>
         <div className='flex justify-center items-center mt-2 pt-2 gap-2'>
-          <button className='border-2 border-black rounded-lg p-1 text-white bg-black'>Log In</button>
+          <button className='border-2 border-black rounded-lg p-1 text-white bg-black'>Submit</button>
           <Link to="/">
             <button className='border-2 border-black rounded-lg p-1 text-white bg-black'>Cancel</button>
           </Link>

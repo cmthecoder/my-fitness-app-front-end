@@ -10,7 +10,7 @@ const LoginPage = props => {
 
   return (
     <main className='w-full h-screen flex justify-center items-center flex-col'>
-      <h1 className='mb-10 sm:text-3xl text-xl'>Log In</h1>
+      <h1 className='mb-10 sm:text-3xl text-3xl'>Log In</h1>
       <p>{message}</p>
       <LoginForm
         handleSignupOrLogin={props.handleSignupOrLogin}
