@@ -109,7 +109,7 @@ const SignupForm = props => {
         </div> */}
         <div className='flex justify-center items-center mt-2 pt-2 gap-2'>
           <button disabled={isFormInvalid()} className='border-2 border-black rounded-lg p-1 text-white bg-black'>
-            Sign Up
+            Submit
           </button>
           <Link to="/">
             <button className='border-2 border-black rounded-lg p-1 text-white bg-black'>Cancel</button>
